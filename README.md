@@ -1,14 +1,13 @@
 # indonesian_currency_formatter
 
-A new Flutter project.
+Indonesian rupiah currency formatter, currency parser and input formatter.
 
-## Getting Started
+```yaml
+indonesian_currency_formatter:
+    path: ../indonesian_currency_formatter
+```  
 
-This project is a starting point for a Dart
-[package](https://flutter.dev/developing-packages/),
-a library module containing code that can be shared easily across
-multiple Flutter or Dart projects.
+## TODO
 
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.dev/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+- [ ] Create more test to add other functionality
+- [ ] Upload to pub.dev
