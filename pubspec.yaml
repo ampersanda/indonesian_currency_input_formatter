@@ -1,7 +1,8 @@
 name: indonesian_currency_formatter
-description: A new Flutter project.
+description: Indonesian rupiah currency formatter, currency parser and input formatter
 version: 0.0.1
-author: Mochamad Lucky Pradana
+author:
+  - Mochamad Lucky Pradana <ampersanda.clj@icloud.com>
 homepage: https://ampersanda.dev
 
 environment:
