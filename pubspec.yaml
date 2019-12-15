@@ -1,8 +1,7 @@
 name: indonesian_currency_formatter
 description: Indonesian rupiah currency formatter, currency parser and input formatter
 version: 0.0.1
-author:
-  - Mochamad Lucky Pradana <ampersanda.clj@icloud.com>
+author: Mochamad Lucky Pradana <ampersanda.clj@icloud.com>
 homepage: https://ampersanda.dev
 
 environment:
