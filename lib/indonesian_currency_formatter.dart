@@ -6,22 +6,29 @@ import 'package:intl/intl.dart';
 class IndonesianCurrencyInputFormatter extends TextInputFormatter {
   final double minValue, maxValue;
 
-  static double parse(String value) {
+  static double parse(String value,
+      {String commaDelimiter = ',', String thousandDelimiter = '.'}) {
     if (value == null || value.trim() == '') {
       return null;
     }
 
-    value = value.replaceAll('Rp', '').replaceAll('.', '').replaceAll(',', '.');
+    value = value
+        .replaceAll('Rp', '')
+        .replaceAll(thousandDelimiter, '')
+        .replaceAll(commaDelimiter, thousandDelimiter);
     try {
-      return double.parse(value.replaceAll('Rp', ''));
+      return double.parse(value);
     } catch (e) {
       return null;
     }
   }
 
-  static String format(String value) {
+  static String format(String value,
+      {String parseCommaDelimiter = ',', String thousandParseDelimiter = '.'}) {
     final formatter = NumberFormat('Rp ###,###.###', 'id-ID');
-    return formatter.format(parse(value));
+    return formatter.format(parse(value,
+        commaDelimiter: parseCommaDelimiter,
+        thousandDelimiter: thousandParseDelimiter));
   }
 
   TextEditingValue formatEditUpdate(
