@@ -9,3 +9,4 @@ indonesian_currency_formatter: ^0.0.2
 ## TODO
 
 - [ ] Add more tests (to create other functionality)
+- [ ] Custom delimiter for parsing
