@@ -8,14 +8,20 @@ class IndonesianCurrencyInputFormatter extends TextInputFormatter {
 
   static double parse(String value,
       {String commaDelimiter = ',', String thousandDelimiter = '.'}) {
+    if (commaDelimiter == thousandDelimiter) {
+      throw 'commaDelimiter and thousandDelimiter can not be same';
+    }
+
     if (value == null || value.trim() == '') {
       return null;
     }
 
+    print(value.replaceAll(thousandDelimiter, ''));
+
     value = value
         .replaceAll('Rp', '')
         .replaceAll(thousandDelimiter, '')
-        .replaceAll(commaDelimiter, thousandDelimiter);
+        .replaceAll(commaDelimiter, '.');
     try {
       return double.parse(value);
     } catch (e) {
