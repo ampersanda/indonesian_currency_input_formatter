@@ -6,11 +6,7 @@ import 'package:intl/intl.dart';
 class IndonesianCurrencyInputFormatter extends TextInputFormatter {
   final double minValue, maxValue;
 
-  static double parse(String value) {
-    return parseWithOptions(value, ',', '.');
-  }
-
-  static double parseWithOptions(String value,
+  static double parse(String value,
       [String commaDelimiter, String thousandDelimiter]) {
     if (commaDelimiter == thousandDelimiter) {
       throw 'commaDelimiter and thousandDelimiter can not be same';
@@ -31,16 +27,11 @@ class IndonesianCurrencyInputFormatter extends TextInputFormatter {
     }
   }
 
-  static String format(String value) {
-    final formatter = NumberFormat('Rp ###,###.###', 'id-ID');
-    return formatter.format(parse(value));
-  }
-
-  static String formatWithOptions(String value,
-      {String parseCommaDelimiter = ',', String thousandParseDelimiter = '.'}) {
+  static String format(String value,
+      [String parseCommaDelimiter = ',', String thousandParseDelimiter = '.']) {
     final formatter = NumberFormat('Rp ###,###.###', 'id-ID');
     return formatter.format(
-      parseWithOptions(
+      parse(
         value,
         parseCommaDelimiter,
         thousandParseDelimiter,

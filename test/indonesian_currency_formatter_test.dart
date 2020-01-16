@@ -25,7 +25,7 @@ void main() {
         -123456789.12);
 
     expect(
-        IndonesianCurrencyInputFormatter.parseWithOptions(
+        IndonesianCurrencyInputFormatter.parse(
           '1000.12',
           '.',
           ',',
