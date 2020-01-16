@@ -1,3 +1,11 @@
+## [0.0.3] - January 16th, 2020.
+
+* Add commaDelimiter and thousandDelimiter.
+
+## [0.0.2] - December 15th, 2019.
+
+* Add basic tests.
+
 ## [0.0.1] - TODO: Add release date.
 
-* TODO: Describe initial release.
+* Add basic parsing, formatting and inputFormatter
