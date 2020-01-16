@@ -25,10 +25,10 @@ void main() {
         -123456789.12);
 
     expect(
-        IndonesianCurrencyInputFormatter.parse(
+        IndonesianCurrencyInputFormatter.parseWithOptions(
           '1000.12',
-          commaDelimiter: '.',
-          thousandDelimiter: ',',
+          '.',
+          ',',
         ),
         1000.12);
   });
