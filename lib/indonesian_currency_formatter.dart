@@ -16,8 +16,6 @@ class IndonesianCurrencyInputFormatter extends TextInputFormatter {
       return null;
     }
 
-    print(value.replaceAll(thousandDelimiter, ''));
-
     value = value
         .replaceAll('Rp', '')
         .replaceAll(thousandDelimiter, '')
