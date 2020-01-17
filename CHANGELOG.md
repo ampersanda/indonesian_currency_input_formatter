@@ -1,3 +1,6 @@
+## [0.0.5+1] - January 17th, 2020.
+* Fix failed test.
+
 ## [0.0.4] - January 16th, 2020.
 * Add specific function for using options.
 
