@@ -7,7 +7,7 @@ class IndonesianCurrencyInputFormatter extends TextInputFormatter {
   final double minValue, maxValue;
 
   static double parse(String value,
-      [String commaDelimiter, String thousandDelimiter]) {
+      [String commaDelimiter = ',', String thousandDelimiter = '.']) {
     if (commaDelimiter == thousandDelimiter) {
       throw 'commaDelimiter and thousandDelimiter can not be same';
     }
