@@ -1,3 +1,6 @@
+## [0.0.5+2] - January 18th, 2020.
+* Add max value.
+
 ## [0.0.5+1] - January 17th, 2020.
 * Fix failed test.
 

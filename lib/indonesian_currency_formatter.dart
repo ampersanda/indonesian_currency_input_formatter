@@ -4,12 +4,12 @@ import 'package:flutter/services.dart';
 import 'package:intl/intl.dart';
 
 class IndonesianCurrencyInputFormatter extends TextInputFormatter {
-  final double minValue, maxValue;
+  final double maxValue;
 
   static double parse(String value,
       [String commaDelimiter = ',', String thousandDelimiter = '.']) {
     if (commaDelimiter == thousandDelimiter) {
-      throw 'commaDelimiter and thousandDelimiter can not be same';
+      throw '"commaDelimiter" and "thousandDelimiter" can not be same';
     }
 
     if (value == null || value.trim() == '') {
@@ -50,12 +50,13 @@ class IndonesianCurrencyInputFormatter extends TextInputFormatter {
 
     double value = parse(newValue.text);
 
-    if (minValue != null && maxValue != null) {
+    if (maxValue != null) {
       if (value >= maxValue) {
         value = maxValue;
-      } else if (value <= minValue) {
-        value = minValue;
       }
+//      else if (value <= minValue) {
+//        value = minValue;
+//      }
     }
 
     String newText = format(value.toInt().toString());
@@ -65,5 +66,5 @@ class IndonesianCurrencyInputFormatter extends TextInputFormatter {
         selection: TextSelection.collapsed(offset: newText.length));
   }
 
-  IndonesianCurrencyInputFormatter([this.minValue, this.maxValue]);
+  IndonesianCurrencyInputFormatter({this.maxValue});
 }
